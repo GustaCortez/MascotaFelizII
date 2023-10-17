@@ -16,15 +16,31 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
+  /*primary = Purple80,
     secondary = PurpleGrey80,
-    tertiary = Pink80
+    tertiary = Pink80*/
+
+            primary = Orange,
+    secondary = OrangeLight,
+    tertiary = OrangeDark
+
+
+
+
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
+   /* primary = Purple40,
     secondary = PurpleGrey40,
     tertiary = Pink40
+*/
+
+    primary = BlueGrey,
+    secondary = BluegreyLight,
+    tertiary = BluegreyDark
+
+
+
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -38,8 +54,8 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun MascotaFelizTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+fun MascotaFelizTheme(darkTheme: Boolean,
+  //  darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
@@ -65,6 +81,8 @@ fun MascotaFelizTheme(
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,
+        shapes = Shapes2,
         content = content
+
     )
 }
